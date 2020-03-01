@@ -4,9 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        main.java.Pesel pesel = new main.java.Pesel();
-        pesel.setPesel("44051401359");
+        Pesel pesel = new Pesel();
 
+        main.java.DataReader reader = new main.java.DataReader();
+        reader.scanData();
         System.out.println(pesel.getPesel());
     }
 }

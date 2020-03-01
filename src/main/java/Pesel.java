@@ -1,28 +1,26 @@
 package main.java;
 
+
 public class Pesel {
 
     String pesel;
 
     public String getPesel() {
-        if(validatePesel(pesel)){
             return pesel;
-        }
-        return "";
     }
 
     public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
-    private boolean validatePesel(String pesel){
+    public static boolean isValid(String pesel){
         if(isLengthOk(pesel) && checkSum(pesel)){
             return true;
         }
         return false;
     }
 
-    public boolean isLengthOk(String pesel) {
+    public static boolean isLengthOk(String pesel) {
         if (pesel.length() != 11) {
             System.out.println("Podany pesel nie ma 11 znaków");
             return false;
@@ -41,7 +39,7 @@ public class Pesel {
         return intArray;
     }
 
-    public boolean checkSum(String pesel){
+    public static boolean checkSum(String pesel){
         int PESEL[] = peselConvert(pesel);
         int sum = 9 * PESEL[0] +
                 7 * PESEL[1] +
