@@ -1,4 +1,4 @@
-
+package main.java;
 
 public class Pesel {
 
@@ -22,7 +22,7 @@ public class Pesel {
         return false;
     }
 
-    private boolean isLengthOk(String pesel) {
+    public boolean isLengthOk(String pesel) {
         if (pesel.length() != 11) {
             System.out.println("Podany pesel nie ma 11 znaków");
             return false;
@@ -41,7 +41,7 @@ public class Pesel {
         return intArray;
     }
 
-    private boolean checkSum(String pesel){
+    public boolean checkSum(String pesel){
         int PESEL[] = peselConvert(pesel);
         int sum = 9 * PESEL[0] +
                 7 * PESEL[1] +
