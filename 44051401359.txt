@@ -1,0 +1,4 @@
+IMIE: name
+NAZWISKO: lastname
+MIASTO: city
+PESEL: 44051401359

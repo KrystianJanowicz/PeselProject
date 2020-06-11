@@ -1,11 +1,14 @@
-package main.java;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 
-        DataReader reader = new DataReader();
-        reader.scanData();
+        Person person = new Person();
+        person.scanData();
+        DataWriter writer = new DataWriter();
+        writer.makeFile(person);
 
     }
 }
